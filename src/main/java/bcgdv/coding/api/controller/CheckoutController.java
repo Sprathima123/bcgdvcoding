@@ -15,10 +15,10 @@ import bcgdv.coding.models.Watch;
 public class CheckoutController {
 	
 	@Autowired
-	CheckoutService watchservice;
+	CheckoutService checkoutService;
 	
 	@GetMapping("/watches")
 	 public List<Watch> getAllWatches() {
-		 return watchservice.getAllWatches();
+		 return checkoutService.getAllWatches();
 	 }
 }

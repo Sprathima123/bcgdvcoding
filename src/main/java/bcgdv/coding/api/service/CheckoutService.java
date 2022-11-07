@@ -1,6 +1,7 @@
 package bcgdv.coding.api.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -22,5 +23,19 @@ public class CheckoutService {
 	public List<Watch> getAllWatches() {	
 		return watchCatalogue;
 	}
+	
+	public HashMap<String, Integer> countInputWatchIds(List<String> Ids) {
+		 HashMap<String, Integer> watchIdCount = new HashMap<String, Integer>();
+		 for(int i=0;i<Ids.size(); i++) {
+			 String id = Ids.get(i);
+			 if(watchIdCount.containsKey(id)) {
+				 watchIdCount.put(id, watchIdCount.get(id) + 1);
+			 }
+			 else {
+				 watchIdCount.put(id, 1);
+			 }			 
+		 }
+		 return watchIdCount;
+	 }
 	
 }
