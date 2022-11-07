@@ -5,9 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import bcgdv.coding.api.service.CheckoutService;
+import bcgdv.coding.models.Request;
+import bcgdv.coding.models.Response;
 import bcgdv.coding.models.Watch;
 
 @RestController
@@ -20,5 +24,10 @@ public class CheckoutController {
 	@GetMapping("/watches")
 	 public List<Watch> getAllWatches() {
 		 return checkoutService.getAllWatches();
-	 }
+	}
+	
+	@PostMapping("/checkout")
+	public Response calculateTotalPrice(@RequestBody Request watchIds) {
+		 return checkoutService.calculateTotalPrice(watchIds);
+	}
 }
