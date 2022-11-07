@@ -3,6 +3,7 @@ package bcgdv.coding.api.service;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
@@ -37,7 +38,7 @@ public class CheckoutService {
 			 }			 
 		 }
 		 return watchIdCount;
-	 }
+	}
 	
 	public Watch getWatchById(String watchId) {
 		Predicate<Watch> wid = p -> p.getWatchId().equals(watchId);
@@ -46,6 +47,14 @@ public class CheckoutService {
 	
 	private Watch filterWatches(Predicate<Watch> strategy) {
 		return getAllWatches().stream().filter(strategy).findFirst().orElse(null);
+	}
+	
+	public float[] parseDiscountPrice(String discount) {
+		 float[] discountPrice = new float[2];
+		 Scanner scanner = new Scanner(discount).useDelimiter("\\D+");
+		 discountPrice[0] = scanner.nextInt();
+		 discountPrice[1] = scanner.nextInt();
+		 return discountPrice;
 	}
 	
 }
