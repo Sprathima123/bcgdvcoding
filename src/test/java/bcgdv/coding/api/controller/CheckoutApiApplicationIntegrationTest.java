@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = CheckoutController.class)
-public class ApiApplicationIntegrationTest {
+public class CheckoutApiApplicationIntegrationTest {
 
 	@Autowired
 	private MockMvc mockMvc;

@@ -21,11 +21,6 @@ public class CheckoutController {
 	@Autowired
 	CheckoutService checkoutService;
 	
-	@GetMapping("/watches")
-	 public List<Watch> getAllWatches() {
-		 return checkoutService.getAllWatches();
-	}
-	
 	@PostMapping("/checkout")
 	public Response calculateTotalPrice(@RequestBody Request watchIds) {
 		 return checkoutService.calculateTotalPrice(watchIds);
