@@ -1,4 +1,4 @@
-package bcgdv.coding.models;
+package bcgdv.coding.dto;
 
 public class Response {
 	

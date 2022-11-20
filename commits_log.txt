@@ -1,0 +1,49 @@
+commit 5fe16546ae0bde77640bafa707c90a02a8856064
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 19:28:14 2022 +0100
+
+    Removed get api endpoint and updated readme
+
+commit 9b495214364484306a05732464866edf89c2988a
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 19:09:46 2022 +0100
+
+    Created post api end point to calculate the price and added integration
+    test
+
+commit 58143bc3d34e77fddd9c731e91ea8e1b694b03c0
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 18:57:33 2022 +0100
+
+    Added method and testcases for calculate total price of watches
+
+commit ab61d6e74162e86504cd20ffb2e31f4745c6dff4
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 18:21:45 2022 +0100
+
+    Adding method to parse the discount from watch object to get the
+    discount price and number of products
+
+commit 1b35cb38e34b4369295d35f595c8626c943b1909
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 18:07:28 2022 +0100
+
+            Added method and testcase for getting watch object from watchId
+
+commit bad156e200d7344f928ac6b26c4bf8c9431757be
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 17:56:42 2022 +0100
+
+    Adding method and testcase to count each category of watchid from the request body
+
+commit b52f11e97474fda2226a26017e42a6e34f7a9f47
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 16:47:06 2022 +0100
+
+    Created a rest api endpoint to get all the watches from the watch catalogue
+
+commit 88fde822d1ce715f1d56c44f28b2ec65bbdf149d
+Author: prathima s <prathima.s194@gmail.com>
+Date:   Mon Nov 7 15:58:28 2022 +0100
+
+    Spring Boot application created using spring initialiser

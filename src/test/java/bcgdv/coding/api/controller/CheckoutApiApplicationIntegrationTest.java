@@ -17,7 +17,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import bcgdv.coding.models.Request;
+import bcgdv.coding.api.CheckoutController;
+import bcgdv.coding.dto.Request;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;

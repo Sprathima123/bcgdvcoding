@@ -1,4 +1,4 @@
-package bcgdv.coding.models;
+package bcgdv.coding.dto;
 
 import java.util.ArrayList;
 import java.util.List;

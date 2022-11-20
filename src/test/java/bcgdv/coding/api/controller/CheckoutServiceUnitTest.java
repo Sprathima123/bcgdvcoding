@@ -14,8 +14,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import bcgdv.coding.api.service.CheckoutService;
-import bcgdv.coding.models.Request;
-import bcgdv.coding.models.Response;
+import bcgdv.coding.dto.Request;
+import bcgdv.coding.dto.Response;
 import bcgdv.coding.models.Watch;
 
 public class CheckoutServiceUnitTest {
@@ -39,13 +39,12 @@ public class CheckoutServiceUnitTest {
 		assertEquals(expected.toString(), actual.toString()); 
 	}
 	
-	@Test
-	void testGetWatchById() {
-		Watch actual = checkoutService.getWatchById("001");
-		Watch expected = new Watch("001", "Rolex", 100, "3 for 200");
-		assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
-	}
-	
+	/*
+	 * @Test void testGetWatchById() { Watch actual =
+	 * checkoutService.getWatchById("001"); Watch expected = new Watch("001",
+	 * "Rolex", 100, "3 for 200");
+	 * assertThat(actual).usingRecursiveComparison().isEqualTo(expected); }
+	 */
 	@Test
 	void testParseDiscountPrice() {
 		float discountPrice[] = checkoutService.parseDiscountPrice("3 for 200");
